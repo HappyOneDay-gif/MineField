@@ -56,10 +56,10 @@ titleMusic.loop.loop = true;
 gameMusic.intro.preload = 'auto';
 gameMusic.loop.preload = 'auto';
 gameMusic.loop.loop = true;
-titleMusic.intro.volume = 0.8;
-titleMusic.loop.volume = 0.8;
-gameMusic.intro.volume = 0.8;
-gameMusic.loop.volume = 0.8;
+titleMusic.intro.volume = 1;
+titleMusic.loop.volume = 1;
+gameMusic.intro.volume = 1;
+gameMusic.loop.volume = 1;
 titleMusic.intro.addEventListener('ended', () => {
 	playLoop(titleMusic.loop);
 });
@@ -138,7 +138,7 @@ function drawIntro(width, height) {
 	const titleX = (width - titleWidth) / 2;
 	const titleY = Math.max(16, height * 0.035);
 	if (titleImage.complete && titleImage.naturalWidth) context.drawImage(titleImage, titleX, titleY, titleWidth, titleHeight);
-	else drawText('MINEBOUND', width / 2, titleY + 70, 42, '#e8b85d', 'center');
+	else drawText('yo so like the title didnt load', width / 2, titleY + 70, 42, '#e8b85d', 'center');
 
 	drawFlag(width / 2, height * 0.62, 240);
 	drawText('PRESS ENTER', width / 2, height - 58, 14, '#e8b85d', 'center');
